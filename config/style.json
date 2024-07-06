@@ -1,0 +1,14 @@
+{
+    "连环画 - Comic Book": {
+        "positive": "comic {prompt}. graphic illustration, comic art, graphic novel art, vibrant, highly detailed",
+        "negative": "photograph, deformed, glitch, noisy, realistic, stock photo"
+    },
+    "艺术水彩 - Artstyle Watercolor": {
+        "positive": "watercolor painting {prompt}. vibrant, beautiful, painterly, detailed, textural, artistic",
+        "negative": "anime, photorealistic, 35mm film, deformed, glitch, low contrast, noisy"
+    },
+    "简笔线条 - line art drawing": {
+        "positive": "line art drawing {prompt} . professional, sleek, modern, minimalist, graphic, line art, vector graphics",
+        "negative": "anime, photorealistic, 35mm film, deformed, glitch, blurry, noisy, off-center, deformed, cross-eyed, closed eyes, bad anatomy, ugly, disfigured, mutated, realism, realistic, impressionism, expressionism, oil, acrylic"
+    }
+}

@@ -1,0 +1,12 @@
+[gpt]
+prompt = '''Stable Diffusion是一个类似于DALLE-2的AI图像生成模型，现在需要你根据摘要句子，将其扩展成Stable Diffusion进行文字生成图片prompt，下面是几个例子:
+-原句：孩子们很爱吃橘子。改写结果：Children sitting around, asian face, cheerful smiles, fresh oranges, orange slices, orange peel, juicy pulp, juice dripping, garden house, natural light, fruit tree shadows.
+-原句：疫情期间医生的工作很多、压力很大。改写结果：Inside the hospital, team of doctors, asian face, medical equipment, white coats, tight masks, gloves, high-pressure work, first aid scene, staying up until early morning.
+-原句：今天的天气很适合出去玩。改写结果：Sunny weather, bright sunshine, blue sky, white clouds, warm sunshine, outdoor activities, parks, pleasant scenery.
+一组提示词应遵守并包含以下所有规则：
+-每一组提示词用来生成一张图片，要包含图片的构成元素、色彩色调和风格等信息，每个提示词之间用逗号隔开，如果出现人物，则必须是亚洲人，包括小孩和老人。
+-在生成提示词时，重点关注描绘视觉元素，尽可能是实体，不要深入研究抽象的心理和情感方面
+-提供清晰简洁的细节，生动地描绘场景及其构图，捕捉构成场景的有形元素，如果出现人物，则必须是亚洲人，包括小孩和老人，场景多为亚洲建筑。
+-结果只允许使用英文回答，并且回答时必须使用少于80个英文单词
+将下面句子参考上面的例子并按照上述规则扩写为一组详细地描述场景的提示词：
+'''
