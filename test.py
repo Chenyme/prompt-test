@@ -143,34 +143,32 @@ if key == "123456":
             with col1:
                 if st.button("测试效果", use_container_width=True, type="primary"):
                     if user_prompt != "\n" and user_prompt is not None:
-                        if "{prompt}" in positive:
-                            with st.spinner("请等待..."):
+                        # if "{prompt}" in positive:
+                        with st.spinner("请等待..."):
 
-                                url_flow1 = []
-                                for i in range(num):
-                                    json_data = json_input_flow1(
-                                        user_prompt, gender, age, positive, negative
-                                    )  # 发送的json数据
-                                    respond = get_url(json_data)  # 接收的json数据
-                                    url_flow1.append(respond["image_url"])  # 保存URL
-                                    time.sleep(0.01)
-                                    current_time = datetime.datetime.now().strftime(
-                                        "%Y/%m/%d %H:%M:%S"
+                            url_flow1 = []
+                            for i in range(num):
+                                json_data = json_input_flow1(
+                                    user_prompt, gender, age, positive, negative
+                                )  # 发送的json数据
+                                respond = get_url(json_data)  # 接收的json数据
+                                url_flow1.append(respond["image_url"])  # 保存URL
+                                time.sleep(0.01)
+                                current_time = datetime.datetime.now().strftime(
+                                    "%Y/%m/%d %H:%M:%S"
+                                )
+                                current_time = current_time + f"【{str(i+1)}】"
+                                url_data["flow1"].update(
+                                    {current_time: respond["image_url"]}
+                                )
+                                with open(
+                                    f"{path}/config/url.json", "w", encoding="utf-8"
+                                ) as f:
+                                    json.dump(
+                                        url_data, f, ensure_ascii=False, indent=4
                                     )
-                                    current_time = current_time + f"【{str(i+1)}】"
-                                    url_data["flow1"].update(
-                                        {current_time: respond["image_url"]}
-                                    )
-                                    with open(
-                                        f"{path}/config/url.json", "w", encoding="utf-8"
-                                    ) as f:
-                                        json.dump(
-                                            url_data, f, ensure_ascii=False, indent=4
-                                        )
 
-                                st.session_state.url_flow1 = url_flow1
-                        else:
-                            st.error("请预留 {prompt} 作为用户输入占位符！")
+                            st.session_state.url_flow1 = url_flow1
                     else:
                         st.error("请填写用户写作！")
 
