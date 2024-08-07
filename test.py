@@ -45,7 +45,7 @@ def get_url(data):  # 发送json数据，返回json数据
     # 使用 httpx 请求结果 post
     base_url = config["comfy"]["url"]
     response = httpx.post(
-        f"http://{base_url}/result",
+        f"http://{base_url}/result_test",
         json=data,
         headers={"Content-Type": "application/json"},
         timeout=60,
